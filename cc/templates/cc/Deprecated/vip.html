@@ -1,0 +1,11 @@
+<html>
+	<body>
+		{% if user.is_authenticated %}
+			<p>
+				Hello {{ user.first_name }} your user name is {{ user.username }} <br>
+				Are you a superuser {{ user.is_superuser }}
+			</p>
+			<a href="{% url 'logout' %}">Log Out</a>
+			{% endif %}
+	</body>
+</html>

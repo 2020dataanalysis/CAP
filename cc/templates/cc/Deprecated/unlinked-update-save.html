@@ -1,0 +1,9 @@
+{% extends "cc/boot.html" %}
+{% block content %}
+<h1>Saved</h1>
+
+<form enctype='multipart/form-data'>
+	{% csrf_token %}
+	{{ form.as_p }}
+</form>
+{% endblock %}
